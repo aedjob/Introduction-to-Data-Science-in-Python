@@ -63,3 +63,77 @@ name != 'Bayes' #returns 'True' (bayes is not equal to Bayes)
 credit_records.price > 20.00  #returns true or false for every row
 credit_records[credit_records.price > 20.00]  #returns only rows where condition fits
 ```
+```python
+# Select the dogs where Age is greater than 2
+greater_than_2 = mpr[mpr.Age > 2]
+print(greater_than_2)
+
+# Select the dogs whose Status is equal to Still Missing
+still_missing = mpr[mpr.Status == 'Still Missing']
+print(still_missing)
+
+# Select all dogs whose Dog Breed is not equal to Poodle
+not_poodle = mpr[mpr['Dog Breed']!='Poodle']
+print(not_poodle)
+```
+```python
+print(credit_records.head())
+
+# Select purchases from 'Pet Paradise'
+purchase = credit_records[credit_records.location == 'Pet Paradise']
+
+# Display
+print(purchase)
+```
+
+## Creating line plots
+New module: `matplotlib`
+### Matplotlib
+```python
+from matplotlib import pyplot as plt  #loads matplotlib
+
+#create 2 different line plots and display them
+plt.plot(data1.x_values, 
+         data1.y_values)
+plt.plot(data2.x_values, 
+         data2.y_values)
+plt.show()                    
+```
+
+## Adding labels and legends (to line plot)
+```python
+#plain plot
+from matplotlib import pyplot as plt
+plt.plot(ransom.letter,
+         ransom.frequency)
+plt.show()
+
+#axes and title labels (before plt.show())
+plt.xlabel("Letter")
+plt.ylabel("Frequency")
+plt.title("Ransom Note Letters")
+
+#legends
+plt.plot(aditya.days,
+         aditya.cases,
+         label="Aditya")
+plt.legend()
+
+#arbitraty text (quick note)
+plt.text(xcoord,
+        ycoord,
+        "Text Message")   #generic
+plt.text(5,
+        9,
+        "Low H frequency")   #example
+
+#modifying text
+plt.title("Plot title", fontsize = 20)  #change font size
+plt.legend(color="green")               #change font color
+```
+https://en.wikipedia.org/wiki/Web_colors
+
+
+
+
+
