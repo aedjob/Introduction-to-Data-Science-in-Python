@@ -222,10 +222,3 @@ plt.hist(data,
 plt.hist(male_weight, density=True) 
 plt.hist(female_weight, density=True) 
 ```
-
-
-
-
-
-
-
